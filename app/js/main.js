@@ -10,8 +10,15 @@ window.addEventListener('load', function () {
         const loader = document.querySelector('.loader');
 
         setTimeout(() => {
-            loader.parentElement.removeChild(loader);
-        }, 2000);
+            if (loader.classList.contains('active')) {
+                loader.classList.remove('active');
+            }
+
+            setTimeout(() => {
+                loader.parentElement.removeChild(loader);
+            }, 500);
+
+        }, 1500);
     })();
 
     (function timer() {
@@ -20,14 +27,24 @@ window.addEventListener('load', function () {
         }
 
         const eventDate = new Date(2021, 8, 5);
-        const mins = document.querySelector('.counter__item.mins');
-        const hours = document.querySelector('.counter__item.hours');
-        const days = document.querySelector('.counter__item.days');
+
+        const numbers = {
+            mins: document.querySelector('.counter__item.mins'),
+            hours: document.querySelector('.counter__item.hours'),
+            days: document.querySelector('.counter__item.days'),
+        };
+
         setDate();
 
         setInterval(() => {
             setDate();
         }, 60000);
+
+        for (let num in numbers) {
+            if (numbers[num].classList.contains('hide')) {
+                numbers[num].classList.remove('hide');
+            }
+        }
 
         function diffDates(day_one, day_two) {
             return (day_one - day_two) / (60 * 60 * 24 * 1000);
@@ -54,9 +71,9 @@ window.addEventListener('load', function () {
             const hoursNow = 23 - date.getHours();
             const minutesNow = 60 - date.getMinutes();
 
-            showData(days, dateNow);
-            showData(hours, hoursNow);
-            showData(mins, minutesNow);
+            showData(numbers.days, dateNow);
+            showData(numbers.hours, hoursNow);
+            showData(numbers.mins, minutesNow);
         }
     })();
 

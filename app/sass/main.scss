@@ -24,6 +24,12 @@ body {
     z-index: 1000;
     background-color: #F7E870;
     @include flex-center();
+    opacity: 0;
+    transition: all ease-in-out .5s;
+
+    &.active {
+      opacity: 1;
+    }
   }
 
   & .bg-shine {
@@ -240,6 +246,16 @@ body {
     @include response-to(small) {
       padding: 52px 27px 25px;
       max-width: 340px;
+    }
+    
+    &__item {
+      
+      &.hide {
+        
+        & p {
+          color: #fff;
+        }
+      }
     }
 
     &__caption {

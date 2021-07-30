@@ -95,7 +95,12 @@ body {
             align-items: center;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
+            flex-wrap: wrap;
+    opacity: 0;
+    -webkit-transition: all ease-in-out .5s;
+    transition: all ease-in-out .5s; }
+    body .loader.active {
+      opacity: 1; }
   body .bg-shine {
     position: absolute;
     max-width: 1440px;
@@ -280,6 +285,8 @@ body {
       body .counter {
         padding: 52px 27px 25px;
         max-width: 340px; } }
+    body .counter__item.hide p {
+      color: #fff; }
     body .counter__caption {
       position: absolute;
       width: 400px;
