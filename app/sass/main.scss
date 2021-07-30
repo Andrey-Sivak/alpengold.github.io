@@ -24,6 +24,14 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
+
+    @include response-to(small) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -280px;
+      z-index: -2;
+    }
   }
 
   & .bg {
@@ -42,7 +50,11 @@ body {
     @media(max-width: 1440px) {
       background-position: center top;
     }
-    
+
+    @include response-to(small) {
+      background-image: url('../img/main-shine-bg-mob.svg');
+      background-size: cover;
+    }
   }
 
   & .container {
@@ -70,10 +82,6 @@ body {
     position: absolute;
     display: none;
 
-    @include response-to(small) {
-      display: none!important;
-    }
-
     &.choco-wrap {
       display: block;
       width: 186px;
@@ -84,6 +92,15 @@ body {
       @media(max-width: 180px) {
         left: 60px;
       }
+
+      @include response-to(small) {
+        position: relative;
+        top: unset;
+        left: 30px;
+        transform: rotate(-9.66deg);
+        margin-top: 70px;
+        width: 155px;
+      }
     }
 
     &.camera {
@@ -91,6 +108,11 @@ body {
       top: 74px;
       right: 372px;
       display: block;
+
+      @include response-to(small) {
+        top: 348px;
+        right: 20px;
+      }
     }
 
     &.notebook {
@@ -98,6 +120,13 @@ body {
       right: 197px;
       width: 86px;
       display: block;
+
+      @include response-to(small) {
+        top: 395px;
+        right: unset;
+        left: 50%;
+        width: 58px;
+      }
     }
 
     &.baloon {
@@ -105,6 +134,11 @@ body {
       width: 100px;
       top: 23px;
       right: 85px;
+
+      @include response-to(small) {
+        top: 620px;
+        right: 32px;
+      }
     }
 
     &.text {
@@ -116,6 +150,12 @@ body {
       @media(max-width: 1080px) {
         right: 117px;
       }
+
+      @include response-to(small) {
+        top: 452px;
+        width: 130px;
+        right: 15px;
+      }
     }
 
     &.nota {
@@ -123,6 +163,12 @@ body {
       width: 40px;
       right: 305px;
       top: 262px;
+
+      @include response-to(small) {
+        top: 740px;
+        right: 37px;
+        width: 32px;
+      }
     }
 
     &.nota-min {
@@ -130,6 +176,12 @@ body {
       width: 35px;
       top: 187px;
       right: 266px;
+
+      @include response-to(small) {
+        top: 703px;
+        right: 10px;
+        width: 28px;
+      }
     }
 
     &.strips {
@@ -142,6 +194,11 @@ body {
       @media(max-width: 1080px) {
         right: 70px;
       }
+
+      @include response-to(small) {
+        top: 308px;
+        right: -45px;
+      }
     }
 
     &.choco {
@@ -152,6 +209,10 @@ body {
 
       @media(max-width: 1080px) {
         right: 25px;
+      }
+
+      @include response-to(small) {
+        display: none;
       }
     }
   }
@@ -167,6 +228,7 @@ body {
 
     @include response-to(small) {
       padding: 52px 27px 25px;
+      max-width: 340px;
     }
 
     &__caption {
@@ -272,6 +334,14 @@ body {
 
     @include response-to(small) {
       margin-bottom: 22px;
+      margin-top: 30px;
+    }
+
+    & .br-pc {
+
+      @include response-to(small) {
+        display: none;
+      }
     }
   }
 

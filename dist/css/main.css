@@ -79,6 +79,22 @@ body {
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
     z-index: -1; }
+    @media (max-width: 767px) {
+      body .bg-shine {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        top: -280px;
+        z-index: -2; } }
   body .bg {
     position: absolute;
     max-width: 1440px;
@@ -96,6 +112,10 @@ body {
     @media (max-width: 1440px) {
       body .bg {
         background-position: center top; } }
+    @media (max-width: 767px) {
+      body .bg {
+        background-image: url("../img/main-shine-bg-mob.svg");
+        background-size: cover; } }
   body .container {
     padding-top: 23px;
     position: relative; }
@@ -113,9 +133,6 @@ body {
     z-index: -1;
     position: absolute;
     display: none; }
-    @media (max-width: 767px) {
-      body .img {
-        display: none !important; } }
     body .img.choco-wrap {
       display: block;
       width: 186px;
@@ -127,21 +144,45 @@ body {
       @media (max-width: 180px) {
         body .img.choco-wrap {
           left: 60px; } }
+      @media (max-width: 767px) {
+        body .img.choco-wrap {
+          position: relative;
+          top: unset;
+          left: 30px;
+          -webkit-transform: rotate(-9.66deg);
+              -ms-transform: rotate(-9.66deg);
+                  transform: rotate(-9.66deg);
+          margin-top: 70px;
+          width: 155px; } }
     body .img.camera {
       width: 81px;
       top: 74px;
       right: 372px;
       display: block; }
+      @media (max-width: 767px) {
+        body .img.camera {
+          top: 348px;
+          right: 20px; } }
     body .img.notebook {
       top: 78px;
       right: 197px;
       width: 86px;
       display: block; }
+      @media (max-width: 767px) {
+        body .img.notebook {
+          top: 395px;
+          right: unset;
+          left: 50%;
+          width: 58px; } }
     body .img.baloon {
       display: block;
       width: 100px;
       top: 23px;
       right: 85px; }
+      @media (max-width: 767px) {
+        body .img.baloon {
+          top: 620px;
+          right: 32px; } }
     body .img.text {
       display: block;
       top: 245px;
@@ -150,16 +191,31 @@ body {
       @media (max-width: 1080px) {
         body .img.text {
           right: 117px; } }
+      @media (max-width: 767px) {
+        body .img.text {
+          top: 452px;
+          width: 130px;
+          right: 15px; } }
     body .img.nota {
       display: block;
       width: 40px;
       right: 305px;
       top: 262px; }
+      @media (max-width: 767px) {
+        body .img.nota {
+          top: 740px;
+          right: 37px;
+          width: 32px; } }
     body .img.nota-min {
       display: block;
       width: 35px;
       top: 187px;
       right: 266px; }
+      @media (max-width: 767px) {
+        body .img.nota-min {
+          top: 703px;
+          right: 10px;
+          width: 28px; } }
     body .img.strips {
       z-index: -2;
       display: block;
@@ -169,6 +225,10 @@ body {
       @media (max-width: 1080px) {
         body .img.strips {
           right: 70px; } }
+      @media (max-width: 767px) {
+        body .img.strips {
+          top: 308px;
+          right: -45px; } }
     body .img.choco {
       display: block;
       width: 85px;
@@ -177,6 +237,9 @@ body {
       @media (max-width: 1080px) {
         body .img.choco {
           right: 25px; } }
+      @media (max-width: 767px) {
+        body .img.choco {
+          display: none; } }
   body .counter {
     max-width: 494px;
     margin: 0 auto;
@@ -187,7 +250,8 @@ body {
     position: relative; }
     @media (max-width: 767px) {
       body .counter {
-        padding: 52px 27px 25px; } }
+        padding: 52px 27px 25px;
+        max-width: 340px; } }
     body .counter__caption {
       position: absolute;
       width: 400px;
@@ -287,7 +351,11 @@ body {
     margin-bottom: 25px; }
     @media (max-width: 767px) {
       body .info-text {
-        margin-bottom: 22px; } }
+        margin-bottom: 22px;
+        margin-top: 30px; } }
+    @media (max-width: 767px) {
+      body .info-text .br-pc {
+        display: none; } }
   body .footer {
     display: -webkit-box;
     display: -webkit-flex;
