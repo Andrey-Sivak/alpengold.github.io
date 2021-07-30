@@ -6,10 +6,14 @@
 @import "base/typography";
 @import "base/base";
 
-body {
-  font-family: OfficinaSansBlackC;
+body,
+html {
   position: relative;
   overflow-x: hidden;
+}
+
+body {
+  font-family: OfficinaSansBlackC;
   background-image: url('../img/main-bg.png');
   background-size: cover;
   background-position: center;

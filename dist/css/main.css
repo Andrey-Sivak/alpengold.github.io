@@ -60,10 +60,13 @@ input[type="number"] {
 .no-scrolling {
   overflow: hidden; }
 
+body,
+html {
+  position: relative;
+  overflow-x: hidden; }
+
 body {
   font-family: OfficinaSansBlackC;
-  position: relative;
-  overflow-x: hidden;
   background-image: url("../img/main-bg.png");
   background-size: cover;
   background-position: center;
