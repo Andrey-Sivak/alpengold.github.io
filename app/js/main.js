@@ -2,6 +2,18 @@
 
 window.addEventListener('load', function () {
 
+    (function loader() {
+        if (!document.querySelector('.loader')) {
+            return;
+        }
+
+        const loader = document.querySelector('.loader');
+
+        setTimeout(() => {
+            loader.parentElement.removeChild(loader);
+        }, 2000);
+    })();
+
     (function timer() {
         if (!document.querySelector('.counter__wrap')) {
             return;
