@@ -332,6 +332,8 @@ body {
         @include response-to(small) {
           font-size: 40px;
           width: 42px;
+          line-height: 40px;
+          padding: 5px 0;
         }
       }
 
