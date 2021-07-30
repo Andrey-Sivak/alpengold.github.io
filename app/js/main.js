@@ -9,16 +9,14 @@ window.addEventListener('load', function () {
 
         const loader = document.querySelector('.loader');
 
+        if (loader.classList.contains('active')) {
+            loader.classList.remove('active');
+        }
+
         setTimeout(() => {
-            if (loader.classList.contains('active')) {
-                loader.classList.remove('active');
-            }
+            loader.parentElement.removeChild(loader);
+        }, 500);
 
-            setTimeout(() => {
-                loader.parentElement.removeChild(loader);
-            }, 500);
-
-        }, 1500);
     })();
 
     (function timer() {
